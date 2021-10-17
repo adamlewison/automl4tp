@@ -12,5 +12,5 @@ Github repo for honours project at the <i>University Of Cape Town</i>
 
 ### Website
 
-`https://adamlewison.github.io/automl4tp`
+["https://adamlewison.github.io/automl4tp"]
 
