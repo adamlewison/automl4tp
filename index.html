@@ -33,6 +33,8 @@
                 <p>
 					AutoML aims to automate the entire machine learning pipeline. In our research, we focused on hyper-parameter optimisation, a sub-domain of AutoML. Our research focuses on evaluating the performance of evolutionary algorithms for the task of AutoML in the context of trend prediction in time series data. Our research analysed the performance of differential evolution and a genetic algorithm against random search for the task of AutoML.
 				</p>
+                <p> <i> Project Supervised By: Deshendran Moodley</i> </p>
+
             </div>
         </div>
         <nav>
@@ -149,25 +151,29 @@
             <p> In order to acheive the objectives outlined at the beginning of our research, we performed a number of different experiments. We implemented the experiments using Python along with PyTorch for the neural networks and PyMoo for the evolutionary algorithm. We evaluated the evolutionary algorithms against a hand-made random search method. Below are the details and the results pertaining to each evolutionary algorithm under evaluation. </p>
 
             <h3 class="major">Genetic Algorithm</h3>
-            <p> </p>
+            <p> In order to evaluate the performance of the genetic algorithm against the random search algorithm, two sets of experiments were performed. We performed experiments with both high and low computational budgets in order to evaluate the AutoML algorithms under different computational circumstances. These experiments were performed on two datasets - the closing prices of the NYSE and NASDAQ. Each of these experiments were run 8 times in order to have robust results. We evaluate the performance of the genetic algorithm and random search by means of the validation MSE on two different neural network models - an LSTM and an MLP.  </p>
+            <h4> Results </h4>
             <span class="image main">
                 <img alt="" src="images/nasd.png"/>
-                This image ...
+                Results from high budget experiments on the NASDAQ dataset. Lower MSE is better. 
             </span>
             <span class="image main">
                 <img alt="" src="images/l_nas.png"/>
-                This image ...
+                Results from low budget experiments on the NASDAQ dataset. Lower MSE is better. 
             </span>
-            <p>  </p>
+            <p> From the first plot, we can see that the genetic algorithm outperforms the random search algorithm, on average, for both the MLP and the LSTM in the high budget experiments on the NASDAQ dataset. This is not the case for the low budgets experiments where random search outperforms genetic algorithm on the LSTM. It is also important to note the lower variability of the genetic algorithm experiments on the high budget experiments, but the opposite case in the low budget experiments. </p>
             <span class="image main">
                 <img alt="" src="images/ny.png"/>
-                This image ...
+                Results from high budget experiments on the NYSE dataset. Lower MSE is better. 
             </span>
             
             <span class="image main">
                 <img alt="" src="images/low_ny.png"/>
-                This image ...
+                Results from low budget experiments on the NYSE dataset. Lower MSE is better.
             </span>
+            <p> From the above two plots for the experiments on the NYSE dataset, we can see that the genetic algorithm outperforms the random search algorithm, on average, for both the MLP and the LSTM. This is the case for both the high and low budget experiments. However, here the variability is varied betweem the two AutoML methods.  </p>
+            <h4> Conclusions </h4>
+            <p>  </p>
             <h3 class="major">Differential Evolution</h3>
             <p>
                 In line with Objective one concerning Differential Evolution - we found that a population size of 20 performed very well.
