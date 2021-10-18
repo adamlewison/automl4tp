@@ -51,19 +51,39 @@
 
         <!-- Intro -->
         <article id="overview">
+
             <h2 class="major">Overview</h2>
+
+            <!--
             <span class="image main"><img alt="" src="images/pic01.jpg"/></span>
-            <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue.
-                Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus
-                nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome
-                    work</a>.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
-                taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu
-                nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies
-                condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem
-                mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et
-                netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque
-                aliquam maximus risus, vel sed vehicula.</p>
+            -->
+
+            <h3>Data Pre-Processing</h3>
+            <p>
+                We obtained time series data of the daily prices of three various financial equities.
+                We obtained this data from <a href="https://finance.yahoo.com">finance.yahoo.com</a>.
+            </p>
+            <span class="image main">
+                <img alt="" src="images/trend-lines.jpg"/>
+                <i>https://www.forex.academy</i>
+            </span>
+            <p>
+                Similar to the image above,
+                we systematically converted this raw time series data into a sequence of trend lines for each financial equity.
+            </p>
+            <p>
+                Since we are concerned with teaching a machine learning model to predict the next trend it is clear that we are dealing with a supervised learning problem.
+                Thus we needed to construct our data (the sequence of trend lines) into a collection of input-output pairs, otherwise known as feature-label pairs.
+                To this end we used a standard sliding window algorithm. In order to construct a single input-output pair the algorithm groups trend lines into a matrix of four trend lines and associates a label where the label is the next trend line.
+                The algorithm does this for the entire data-set as depicted in the picture below.
+            </p>
+            <span class="image main">
+                <img alt="" src="images/sliding-window.png"/>
+                This algorithm groups trend lines (T) into a matrix of four trend lines (A) and associates a label (B) where the label is the next trend line.
+            </span>
+            <p>
+
+            </p>
         </article>
 
         <!-- Work -->
@@ -431,7 +451,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
     <!-- Footer -->
     <footer id="footer">
-		<p class="copyright">&copy; Contact: <a href="#contact">Adam and James</a>. Design: <a href="https://html5up.net">HTML5 UP</a>. Image: <a href="https://www.astrophemeris.es">www.astrophemeris.es</a> </p>
+		<p class="copyright">&copy; Contact: <a href="#contact">Adam and James</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.<br /><br /> Image: <a href="https://www.astrophemeris.es">www.astrophemeris.es</a> </p>
     </footer>
 
 </div>
