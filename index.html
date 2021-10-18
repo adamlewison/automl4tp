@@ -117,7 +117,11 @@
                 A class of optimization techniques known as Evolutionary Optimization Algorithms are a promising candidate to perform very well for this task.
                 The main concept of an Evolutionary Optimization Algorithm is <i>generations</i>. A generation contains a population of members where each member represents a position in the search space.
                 Through variations of mutation and selection techniques - a new generation is born - where the new generation is supposedly an improved version compared to its parent generation.
-                In this way the algorithm attempts to find the best position.s
+                In this way the algorithm attempts to find the best position.
+            </p>
+
+            <p>
+                The focus of our research is the exploration of two Evolutionary Algorithms in particular, namely: Genetic Algorithms and Differential Evolution.
             </p>
         </article>
 
@@ -129,18 +133,19 @@
             <p>Thus, we set out our research to answer two research questions formulated from the above objective. Firstly, can evolutionary algorithms be used to effectively solve the hyperparameter optimisation problem when compared to a conventional method - random search in this case - in terms of minimising the validation mean squared error of the model? Secondly, how well do the models produced by the evolutionary algorithm AutoML method perform in the task of trend prediction, using the model's test mean square error as the evaluation metric? </p>
             <h3> Genetic Algorithm Objectives </h3>
             <p> The experiments regarding genetic algorithms were evaluated further with the objective of understanding how well the two algorithms (genetic algorithm and random search) perform under both high and low computational budgets. </p>
+
             <h3> Differential Evolution Objectives </h3>
-            <p> The experiments regarding differential evolution were too evaluated further with two different objectives. The first objective being to study the effect of change in control-parameters and the Differential Evolution algorithm in order to optimize its performance. The second objective was to compare the performance of differential evolution to an unintelligent random search and to another state of the art evolutionary algorithm.</p>
+            <p>
+                The experiments regarding Differential Evolution had two primary objectives.
+                The first objective was to study the effect of change in the control-parameters of the Differential Evolution algorithm in order to optimize its performance.
+                The second objective was to compare the performance (in terms of speed of minimisation and ability to learn the underlying pattern of the data) of differential evolution to an unintelligent random search and to another state of the art evolutionary algorithm.
+            </p>
         </article>
 
         <!-- About -->
         <article id="results">
             <h2 class="major">Results</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend
-                sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam.
-                Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum
-                primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
             <h3 class="major">Genetic Algorithm</h3>
             <h3 class="major">Differential Evolution</h3>
             <p>
@@ -161,6 +166,15 @@
                 <img alt="" src="images/heat_alldata_20.png"/>
                 This image clearly depicts the drop in mean squared error with a validation size of 20.
             </span>
+
+            After selecting optimal control-parameters, Differential Evolution was evaluated in how quickly it was able to minimize the objective in comparison to a random search and a different state-of-the-art evolutionary algorithm.
+
+            As can be seen in the image below, Differential Evolution showed to be more effective than a completely random search in efficiently minimizing the objective function.
+            <span class="image main">
+                <img alt="" src="images/cv_nyse_rnd.png"/>
+            </span>
+
+            However, when the final models were evaluated on a set of out-of-sample data, the model found by the Differential Evolution algorithm was not superior to that found by Pattern Search or even the unintelligent random search for any of the data sets.
         </article>
 
 		<!-- About -->
