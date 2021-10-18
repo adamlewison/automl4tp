@@ -173,7 +173,8 @@
             </span>
             <p> From the above two plots for the experiments on the NYSE dataset, we can see that the genetic algorithm outperforms the random search algorithm, on average, for both the MLP and the LSTM. This is the case for both the high and low budget experiments. However, here the variability is varied betweem the two AutoML methods.  </p>
             <h4> Conclusions </h4>
-            <p>  </p>
+            <p> From the results of the experiments, we found that a genetic algorithm can, in general, outperform a simple random search algorithm for the task of hyperparameter optimisation given both high and low computational budgets. However, the time to terminate for the genetic algorithm was significantly longer than random search.  </p>
+            <p> The performance of the models selected by the AutoML algorithms were poor on out-of-sample data. This was determined to be due to the nature of our validation process, rather than the autoML techniques themselves.  </p>
             <h3 class="major">Differential Evolution</h3>
             <p>
                 In line with Objective one concerning Differential Evolution - we found that a population size of 20 performed very well.
