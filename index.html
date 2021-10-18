@@ -81,8 +81,43 @@
                 <img alt="" src="images/sliding-window.png"/>
                 This algorithm groups trend lines (T) into a matrix of four trend lines (A) and associates a label (B) where the label is the next trend line.
             </span>
-            <p>
 
+            <h3>Machine Learning</h3>
+            <span class="image main">
+                <img alt="" src="images/nn1.png"/>
+                <i>http://brainstormingbox.org</i>
+            </span>
+            <p>
+                As described above, we are dealing with a supervised learning problem. In order to train the weights of the machine learning model we use 60% of the trend lines constructed (explained above).
+                We then pass the four previous trend lines into a machine learning model and the output of the machine learning model is the predicted next trend line.
+            </p>
+
+            <h3>Automated Machine Learning</h3>
+            <p>
+                We applied a subset of Automated Machine Learning to this task known as Combined Algorithm and Hyper-Parameter Selection (CASH).
+                That is, for a pre-defined selection of machine learning algorithms and a selected range of their respective hyper-parameters - we try to find the combination of algorithm and hyper-parameters that best predicts the next trend line.
+            </p>
+            <p>
+                This CASH problem can be seen as a black-box optimization problem, i.e. there is a large search space, we are trying to find the location in this search space which minimises the objective function.
+                In our case the objective function used is the combined (Trend Line Length and Trend Line Gradient) mean squared error of actual observed trend lines versus predicted trend lines over a validation set (The validation set used is a subset of 20% of the trend lines constructed above).
+            </p>
+
+            <h3>Evolutionary Optimization Algorithms</h3>
+
+            <p>
+                Now that we have set up a large search space and an objective function over that search space - we are left with a difficult optimization problem!
+            </p>
+
+            <span class="image main">
+                <img alt="" src="images/Ackley.gif"/>
+                <i>Pablormier - https://pablormier.github.io/2017/09/05/a-tutorial-on-differential-evolution-with-python</i>
+            </span>
+
+            <p>
+                A class of optimization techniques known as Evolutionary Optimization Algorithms are a promising candidate to perform very well for this task.
+                The main concept of an Evolutionary Optimization Algorithm is <i>generations</i>. A generation contains a population of members where each member represents a position in the search space.
+                Through variations of mutation and selection techniques - a new generation is born - where the new generation is supposedly an improved version compared to its parent generation.
+                In this way the algorithm attempts to find the best position.s
             </p>
         </article>
 
